@@ -29,15 +29,15 @@ list_of_files = [
 ]
 
 for filepath in list_of_files:
-    filepath = Path(filepath) #Handle slash for windows, linux, or other OS
-    filedir, filename = os.path.split(filepath) #Return filedir and filename
+    filepath = Path(filepath) # Handle slash for windows, linux, or other OS
+    filedir, filename = os.path.split(filepath) # Return filedir and filename
     
-    #Create dir if doesn't exist
+    # Create dir if doesn't exist
     if filedir != "":
         os.makedirs(filedir, exist_ok=True)
         logging.info(f"Creating directory: {filedir} for the file {filename}")
     
-    #Create file if doesn't exist
+    # Create file if doesn't exist
     if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
         with open(filepath, 'w') as f:
             pass
