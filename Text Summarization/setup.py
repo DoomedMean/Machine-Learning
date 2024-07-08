@@ -13,6 +13,6 @@ setuptools.setup(
     version= __version__,
     description="NLP app",
     url="https://github.com/DoomedMean/Machine-Learning/tree/main/Text%20Summarization",
-    package_dir={"": "src"},
+    package_dir={"": "src"}, # Load Package location on src folder
     packages=setuptools.find_packages(where="src")
 )
